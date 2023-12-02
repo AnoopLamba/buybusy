@@ -22,7 +22,7 @@ function SignIn() {
 
   useEffect(() => {
     if (signInSuccess) {
-      navigate("/");
+      navigate("/buybusy");
       dispatch(userActions.setSignInSuccess(false));
     }
   }, [signInSuccess, dispatch, navigate]);
