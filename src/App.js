@@ -31,9 +31,7 @@ function App() {
   useEffect(() => {
     console.log("useEffect to populate Products array!");
     const unsub = onSnapshot(collection(db, "products"), (querySnapShot) => {
-      const dataFromDB = querySnapShot.docs.map((doc) => (
-        { ...doc.data() }
-      ));
+      const dataFromDB = querySnapShot.docs.map((doc) => ({ ...doc.data() }));
       dispatch(productsAction.setProducts(dataFromDB));
       dispatch(productsAction.setProductsLoading(false));
     });
@@ -59,7 +57,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/buybusy",
       element: <Navbar />,
       errorElement: <ErrorPage />,
       children: [
@@ -67,7 +65,7 @@ function App() {
         { path: "myorders", element: <Orders /> },
         { path: "cart", element: <Cart /> },
         { path: "signin", element: <SignIn /> },
-        { path: "signup", element: <SignUp /> }
+        { path: "signup", element: <SignUp /> },
       ],
     },
   ]);
