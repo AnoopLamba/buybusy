@@ -25,9 +25,9 @@ function SignUp() {
     setPass("");
   };
 
-  useEffect(()=> {
-    if(signUpSuccess) {
-      navigate("/");
+  useEffect(() => {
+    if (signUpSuccess) {
+      navigate("/buybusy");
       dispatch(userActions.setSignUpSuccess(false));
     }
   }, [signUpSuccess, dispatch, navigate]);
