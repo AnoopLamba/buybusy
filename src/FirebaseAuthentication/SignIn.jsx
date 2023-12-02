@@ -64,7 +64,7 @@ function SignIn() {
           {isSigningIn ? "..." : "Sign In"}
         </button>
         <span>
-          No account ? <Link to="/signup">Create one!</Link>
+          No account ? <Link to="/buybusy/signup">Create one!</Link>
         </span>
       </form>
     </div>

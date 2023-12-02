@@ -22,7 +22,7 @@ function Navbar() {
 
   useEffect(() => {
     if (signOutSuccess) {
-      navigate("/");
+      navigate("/buybusy");
       dispatch(userActions.setSignOutSuccess(false));
     }
   }, [signOutSuccess, dispatch, navigate]);
@@ -40,12 +40,12 @@ function Navbar() {
   return (
     <>
       <div className={styles.Navbar}>
-        <Link to="/" className={styles.navLogo}>
+        <Link to="/buybusy" className={styles.navLogo}>
           Buy Busy
         </Link>
         <ul className={styles.navMenu}>
           <li className={styles.navOption}>
-            <Link to="/" className={styles.navLink}>
+            <Link to="/buybusy" className={styles.navLink}>
               <img
                 className={styles.navIcon}
                 src={HomeIcon}
@@ -57,7 +57,7 @@ function Navbar() {
           {user ? (
             <>
               <li className={styles.navOption}>
-                <Link to="/myorders" className={styles.navLink}>
+                <Link to="/buybusy/myorders" className={styles.navLink}>
                   <img
                     className={styles.navIcon}
                     src={OrdersIcon}
@@ -67,7 +67,7 @@ function Navbar() {
                 </Link>
               </li>
               <li className={styles.navOption}>
-                <Link to="/cart" className={styles.navLink}>
+                <Link to="/buybusy/cart" className={styles.navLink}>
                   <img
                     src={CartIcon}
                     className={styles.navIcon}
@@ -89,7 +89,7 @@ function Navbar() {
             </>
           ) : (
             <li className={styles.navOption}>
-              <Link to="/signin" className={styles.navLink}>
+              <Link to="/buybusy/signin" className={styles.navLink}>
                 <img
                   src={SignInIcon}
                   className={styles.navIcon}
