@@ -29,10 +29,9 @@ function CartSidebar() {
   const handlePurchase = async (user) => {
     try {
       dispatch(purchaseThunk({ user }));
-
       dispatch(emptyTheCartThunk({ user }));
-
-      navigate("/myorders");
+      navigate("/buybusy/myorders");
+      toast.success("Items purchased!");
     } catch (error) {
       toast.error("Error purchasing!");
     }

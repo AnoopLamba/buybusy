@@ -31,11 +31,18 @@ function SignIn() {
     e.preventDefault();
     dispatch(signInThunk({ email, pass }))
       .then((actionCreator) => {
-        const uid = actionCreator.payload;
-        localStorage.setItem("uid", uid);
-        dispatch(userActions.setUser(uid));
-        clear();
-        toast.success("Signed in successfully!");
+        console.log("sign in actionCreator: ", actionCreator);
+        const output = actionCreator.payload;
+
+        if (!output.includes("auth")) {
+          const uid = output;
+          localStorage.setItem("uid", uid);
+          dispatch(userActions.setUser(uid));
+          clear();
+          toast.success("Signed in successfully!");
+        } else {
+          toast.error(output.toUpperCase());
+        }
       })
       .catch((error) => {
         toast.error(error.code);
