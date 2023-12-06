@@ -55,6 +55,7 @@ function Navbar() {
         <ul className={styles.navMenu}>
           <li className={styles.navOption}>
             <NavLink
+              end
               to="/buybusy"
               className={styles.navLink}
               style={({ isActive }) => {
@@ -111,6 +112,7 @@ function Navbar() {
               </li>
               <li className={styles.navOption} onClick={handleSignOut}>
                 <NavLink
+                  end
                   className={styles.navLink}
                   style={({ isActive }) => {
                     return {
@@ -130,6 +132,7 @@ function Navbar() {
           ) : (
             <li className={styles.navOption}>
               <NavLink
+                end
                 to="/buybusy/signin"
                 className={styles.navLink}
                 style={({ isActive }) => {
