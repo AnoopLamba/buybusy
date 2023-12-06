@@ -6,7 +6,7 @@ import CartIcon from "../../Icons/shopping-cart.png";
 import SignOutIcon from "../../Icons/exit.png";
 import SignInIcon from "../../Icons/enter.png";
 import styles from "./Navbar.module.css";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   signOutThunk,
@@ -17,6 +17,7 @@ import { useEffect } from "react";
 
 function Navbar() {
   const navigate = useNavigate();
+  console.log(navigate);
   const { user, signOutSuccess } = useSelector(userSelector);
   const dispatch = useDispatch();
 
@@ -40,63 +41,110 @@ function Navbar() {
   return (
     <>
       <div className={styles.Navbar}>
-        <Link to="/buybusy" className={styles.navLogo}>
+        <NavLink
+          className={styles.navLogo}
+          style={({ isActive }) => {
+            return {
+              color: isActive ? "#7064e5" : "black",
+            };
+          }}
+          to="/buybusy"
+        >
           Buy Busy
-        </Link>
+        </NavLink>
         <ul className={styles.navMenu}>
           <li className={styles.navOption}>
-            <Link to="/buybusy" className={styles.navLink}>
+            <NavLink
+              to="/buybusy"
+              className={styles.navLink}
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "#7064e5" : "black",
+                };
+              }}
+            >
               <img
                 className={styles.navIcon}
                 src={HomeIcon}
                 alt="home button"
               />
               Home
-            </Link>
+            </NavLink>
           </li>
           {user ? (
             <>
               <li className={styles.navOption}>
-                <Link to="/buybusy/myorders" className={styles.navLink}>
+                <NavLink
+                  to="/buybusy/myorders"
+                  className={styles.navLink}
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#7064e5" : "black",
+                    };
+                  }}
+                >
                   <img
                     className={styles.navIcon}
                     src={OrdersIcon}
                     alt="orders icon"
                   />
                   My Orders
-                </Link>
+                </NavLink>
               </li>
               <li className={styles.navOption}>
-                <Link to="/buybusy/cart" className={styles.navLink}>
+                <NavLink
+                  to="/buybusy/cart"
+                  className={styles.navLink}
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#7064e5" : "black",
+                    };
+                  }}
+                >
                   <img
                     src={CartIcon}
                     className={styles.navIcon}
                     alt="cart icon"
                   />
                   Cart
-                </Link>
+                </NavLink>
               </li>
               <li className={styles.navOption} onClick={handleSignOut}>
-                <Link className={styles.navLink}>
+                <NavLink
+                  className={styles.navLink}
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "#7064e5" : "black",
+                    };
+                  }}
+                >
                   <img
                     src={SignOutIcon}
                     className={styles.navIcon}
                     alt="sign out icon"
                   />
                   Logout
-                </Link>
+                </NavLink>
               </li>
             </>
           ) : (
             <li className={styles.navOption}>
-              <Link to="/buybusy/signin" className={styles.navLink}>
+              <NavLink
+                to="/buybusy/signin"
+                className={styles.navLink}
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "#7064e5" : "black",
+                  };
+                }}
+              >
                 <img
                   src={SignInIcon}
                   className={styles.navIcon}
                   alt="sign in icon"
                 />
                 Sign In
-              </Link>
+              </NavLink>
             </li>
           )}
         </ul>
