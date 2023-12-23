@@ -26,15 +26,27 @@
 
 /* sidebar styling */
 .Sidebar {
-  position: fixed;
-  left: 1.2rem;
-  top: 33%;
-  width: 14rem;
-  padding: 1rem;
+  margin-top: 16px;
+  max-width: 200px;
+  width: 100%;
+  padding: 16px;
   box-sizing: border-box;
   text-align: center;
   background: #eaeafa;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  @media (max-width: 768px) {
+    max-width: 170px;
+  }
+  @media (max-width: 640px) {
+    background: white;
+    max-width: 210px;
+  }
 }
 .Sidebar h3 {
   color: rgb(56, 56, 56);
@@ -42,43 +54,35 @@
 .purchaseBtn {
   border: 2px solid #7064e5;
   cursor: pointer;
-  width: 60%;
+  width: 100%;
   background: #7064e5;
   border-radius: 5px;
   color: white;
   font-size: 16px;
-  padding: 8px 0;
+  padding: 4px 8px;
   transition: all 0.3s ease-in-out;
 }
 .purchaseBtn:hover {
   color: #7064e5;
-  background-color: #f4f6f8;
-}
-
-/* display list styling */
-.List {
-  margin: 1rem 17rem;
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
+  background-color: #f8f7ff;
 }
 
 /* Card styling */
 .CartCard {
+  background: white;
   border-radius: 5px;
-  padding: 2rem;
-  height: 400px;
-  width: 300px;
+  padding: 18px 22px;
+  max-height: 310px;
+  height: 100%;
+  max-width: 300px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  margin: 0.9rem 0.7rem;
-  box-shadow: 0 2px 8px 0 rgba(64, 77, 148, 0.4);
 }
 .cartImage {
-  height: 60%;
+  height: 50%;
 }
 .cartImage img {
   height: 100%;
@@ -108,13 +112,15 @@
   justify-content: space-between;
   font-size: 24px;
   width: 100%;
-  padding: 8px 0;
+  padding-bottom: 4px;
 }
 .productPrice {
   margin: 0;
   font-weight: bold;
+  font-size: 20px;
 }
 .quantityButtons {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -126,7 +132,7 @@
   width: 25px;
   transition: all 0.2s ease-in-out;
 }
-.quantityButtons img:hover{
+.quantityButtons img:hover {
   transform: scale(0.9);
 }
 .removeBtn {
@@ -137,7 +143,7 @@
   border-radius: 5px;
   color: white;
   font-size: 20px;
-  padding: 8px 0;
+  padding: 5px 0;
   transition: all 0.3s ease-in-out;
 }
 .removeBtn:hover {

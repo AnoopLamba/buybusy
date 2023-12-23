@@ -67,7 +67,9 @@ function SignIn() {
           type="password"
           required
         />
-        <button className={styles.formBtn}>
+        <button
+          className={`${styles.formBtn} group hover:bg-black hover:border-black`}
+        >
           {isSigningIn ? "..." : "Sign In"}
         </button>
         <span>

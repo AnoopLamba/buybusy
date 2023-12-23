@@ -53,7 +53,7 @@ function ProductCard(props) {
   };
 
   return (
-    <div className={styles.ProductCard}>
+    <div className={`${styles.ProductCard} shadow-xl border-2`}>
       <div className={styles.productImage}>
         <img src={product.image} alt="product" />
       </div>

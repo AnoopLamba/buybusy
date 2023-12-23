@@ -1,6 +1,5 @@
 import styles from "./Home.module.css";
 import HomeList from "./HomeList";
-import HomeSidebar from "./HomeSidebar";
 import Spinner from "react-spinner-material";
 import HomeForm from "./HomeForm";
 import { useSelector } from "react-redux";
@@ -22,7 +21,6 @@ function Home() {
       ) : (
         <>
           <HomeForm />
-          <HomeSidebar />
           <HomeList />
         </>
       )}

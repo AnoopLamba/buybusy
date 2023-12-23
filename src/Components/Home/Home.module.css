@@ -13,8 +13,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  box-sizing: border-box;
+  align-items: center;
   margin: auto;
 }
 
@@ -26,33 +25,39 @@
 
 /* home form styling */
 .HomeForm {
-  width: 25%;
+  width: 100%;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-.HomeForm input {
+.SearchProduct {
+  width: 100%;
   background: #f4f6f8;
-  border: 2px solid #7669ed;
+  border: 2px solid darkgray;
   border-radius: 5px;
   box-sizing: border-box;
   color: #7064e5;
   font-size: 1.2em;
-  margin-top: 2rem;
   outline: none;
-  padding: 12px;
-  width: 100%;
+  padding: 6px 16px 6px 32px;
+  transition: all 200ms ease-in-out;
+}
+.HomeForm input:focus {
+  border: 2px solid #7064e5;
 }
 
 /* sidebar styling */
 .Sidebar {
-  position: fixed;
-  left: 1.2rem;
-  top: 33%;
-  width: 14rem;
-  padding: 1rem;
+  width: 200px;
+  padding: 16px;
   box-sizing: border-box;
-  text-align: center;
-  background: #eaeafa;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 12px;
 }
 .categories {
   display: flex;
@@ -64,33 +69,25 @@
 .categories input {
   height: 1rem;
   margin-right: 0.5rem;
-  width: 1rem;
-}
-
-/* display list styling */
-.List {
-  margin: 1rem 17rem;
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
+  width: 16px;
 }
 
 /* Card styling */
 .ProductCard {
+  background: white;
   border-radius: 5px;
-  padding: 2rem;
-  height: 400px;
-  width: 300px;
+  padding: 18px 22px;
+  max-height: 370px;
+  height: 100%;
+  max-width: 300px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  margin: 0.9rem 0.7rem;
-  box-shadow: 0 2px 8px 0 rgba(64, 77, 148, 0.4);
 }
 .productImage {
-  height: 60%;
+  height: 50%;
 }
 .productImage img {
   height: 100%;
@@ -113,6 +110,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @media (max-width: 640px) {
+    font-size: 20px;
+  }
 }
 .productPrice {
   margin: 0;
@@ -123,6 +124,10 @@
   justify-content: space-between;
   padding: 8px 0;
   width: 100%;
+
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
 }
 .addBtn {
   border: 2px solid #7064e5;
@@ -137,5 +142,5 @@
 }
 .addBtn:hover {
   color: #7064e5;
-  background-color: #f4f6f8;
+  background-color: #f8f7ff;
 }

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import OrderTable from "./OrderTable";
-import styles from "./Orders.module.css";
 import { db } from "../../firebaseInit";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import Spinner from "react-spinner-material";
@@ -33,16 +32,16 @@ function Orders() {
   }, [user, dispatch]);
 
   return (
-    <div className={styles.Orders}>
+    <div className="flex flex-col items-center justify-start px-4 py-5">
       {loading ? (
-        <div className={styles.spinnerContainer}>
+        <div className="mt-[35vh]">
           <Spinner />
         </div>
       ) : orders.length === 0 ? (
-        <h1 className={styles.ordersEmpty}>No order yet!</h1>
+        <h1 className="text-lg font-bold">No order yet!</h1>
       ) : (
         <>
-          <h1>Your Orders</h1>
+          <h1 className="text-lg font-bold mt-8 mb-4">Your Orders</h1>
           {orders.map((order) => (
             <OrderTable key={order.id} order={order} />
           ))}

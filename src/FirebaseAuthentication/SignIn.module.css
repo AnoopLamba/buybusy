@@ -9,15 +9,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 20rem;
+  max-width: 400px;
+  width: 100%;
   margin: 5% 0;
-  padding: 1rem;
-  gap: 1rem;
+  padding: 16px;
+  gap: 16px;
+
+  @media (max-width: 640px) {
+    gap: 12px;
+  }
 }
 .formHeading {
   margin: 0;
   font-size: 2.5rem;
-  font-weight: 900;
+  font-weight: 700;
+
+  @media (max-width: 640px) {
+    font-size: 2rem;
+    font-weight: 700;
+  }
 }
 .form input {
   background: #f4f6f8;
@@ -29,6 +39,10 @@
   outline: none;
   padding: 12px;
   width: 100%;
+
+  @media (max-width: 640px) {
+    padding: 6px 8px;
+  }
 }
 .formBtn {
   border: 2px solid #7064e5;
@@ -39,6 +53,12 @@
   color: #fff;
   font-size: 20px;
   padding: 8px 0;
+  transition: all 200ms ease-in-out;
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+    padding: 7px 0;
+  }
 }
 .container a {
   text-decoration: none;

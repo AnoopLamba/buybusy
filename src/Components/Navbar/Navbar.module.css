@@ -1,5 +1,5 @@
 .Navbar {
-  height: 85px;
+  height: 65px;
   box-sizing: border-box;
   padding: 0px 30px;
   display: flex;
@@ -14,19 +14,10 @@
   text-decoration: none;
 }
 
-.navLogo {
-  font-weight: bolder;
-}
-
-.navMenu {
-  list-style: none;
-  display: flex;
-  gap: 35px;
-}
 .navLink {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   color: black;
   font-weight: bolder;
   transition: all 0.2s ease-in-out;

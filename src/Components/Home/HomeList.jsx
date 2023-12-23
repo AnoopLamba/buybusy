@@ -1,4 +1,3 @@
-import styles from "./Home.module.css";
 import ProductCard from "./ProductCard";
 import { useSelector } from "react-redux";
 import { productsSelector } from "../../store/reducers/productsReducer";
@@ -22,7 +21,7 @@ function HomeList() {
   });
 
   return (
-    <div className={styles.List}>
+    <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-6 p-4">
       {filteredProducts.map((product) => (
         <ProductCard key={product.itemCode} product={product} />
       ))}

@@ -52,14 +52,14 @@ function CartCard(props) {
   };
 
   return (
-    <div className={styles.CartCard}>
+    <div className={`${styles.CartCard} shadow-xl border-2`}>
       <div className={styles.cartImage}>
         <img src={cartItem.image} alt="product" />
       </div>
       <div className={styles.cartDetails}>
         <p className={styles.titleText}>{cartItem.title}</p>
         <div className={styles.quantityContainer}>
-          <p className={styles.productPrice}>$ {cartItem.price}</p>
+          <p className={styles.productPrice}>${cartItem.price}</p>
           <div className={styles.quantityButtons}>
             <img
               onClick={() => quantityChange(-1)}

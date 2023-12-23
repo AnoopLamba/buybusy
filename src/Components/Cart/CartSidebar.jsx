@@ -39,8 +39,10 @@ function CartSidebar() {
 
   return (
     <div className={styles.Sidebar}>
-      <h2>Total Price</h2>
-      <h3>$ {Number(totalPrice.toFixed(2))}</h3>
+      <h2 className="font-bold text-lg">Total Price</h2>
+      <h3 className=" font-mono font-bold">
+        $ {Number(totalPrice.toFixed(2))}
+      </h3>
       <button
         className={styles.purchaseBtn}
         onClick={() => handlePurchase(user)}
