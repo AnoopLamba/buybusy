@@ -1,10 +1,5 @@
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import HomeIcon from "../../Icons/house-chimney.png";
-import OrdersIcon from "../../Icons/ballot.png";
-import CartIcon from "../../Icons/shopping-cart.png";
-import SignOutIcon from "../../Icons/exit.png";
-import SignInIcon from "../../Icons/enter.png";
 import styles from "./Navbar.module.css";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,7 +16,7 @@ import {
   NavbarLogInIcon,
   NavbarLogOutIcon,
   NavbarOrdersIcon,
-} from "../../Icons/Icons";
+} from "../../Assets/svg/Icons";
 
 function Navbar() {
   const sidebarRef = useRef(null);

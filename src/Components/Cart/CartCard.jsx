@@ -1,5 +1,5 @@
-import PlusIcon from "../../Icons/square-plus.png";
-import MinusIcon from "../../Icons/square-minus.png";
+import PlusIcon from "../../Assets/img/square-plus.png";
+import MinusIcon from "../../Assets/img/square-minus.png";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./Cart.module.css";
