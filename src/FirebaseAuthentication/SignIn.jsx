@@ -22,7 +22,7 @@ function SignIn() {
 
   useEffect(() => {
     if (signInSuccess) {
-      navigate("/buybusy");
+      navigate("/");
       dispatch(userActions.setSignInSuccess(false));
     }
   }, [signInSuccess, dispatch, navigate]);
@@ -73,7 +73,7 @@ function SignIn() {
           {isSigningIn ? "..." : "Sign In"}
         </button>
         <span>
-          No account ? <Link to="/buybusy/signup">Create one!</Link>
+          No account ? <Link to="/signup">Create one!</Link>
         </span>
       </form>
     </div>

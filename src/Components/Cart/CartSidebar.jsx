@@ -30,7 +30,7 @@ function CartSidebar() {
     try {
       dispatch(purchaseThunk({ user }));
       dispatch(emptyTheCartThunk({ user }));
-      navigate("/buybusy/myorders");
+      navigate("/myorders");
       toast.success("Items purchased!");
     } catch (error) {
       toast.error("Error purchasing!");

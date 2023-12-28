@@ -57,7 +57,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/buybusy",
+      path: "/",
       element: <Navbar />,
       errorElement: <ErrorPage />,
       children: [

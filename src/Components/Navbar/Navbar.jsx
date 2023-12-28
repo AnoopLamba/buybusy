@@ -28,7 +28,7 @@ function Navbar() {
 
   useEffect(() => {
     if (signOutSuccess) {
-      navigate("/buybusy");
+      navigate("/");
       dispatch(userActions.setSignOutSuccess(false));
     }
   }, [signOutSuccess, dispatch, navigate]);
@@ -66,7 +66,7 @@ function Navbar() {
               color: isActive ? "#7064e5" : "black",
             };
           }}
-          to="/buybusy"
+          to="/"
         >
           Buy Busy
         </NavLink>
@@ -76,7 +76,7 @@ function Navbar() {
           <li className={styles.navOption}>
             <NavLink
               end
-              to="/buybusy"
+              to="/"
               className={styles.navLink}
               style={({ isActive }) => {
                 return {
@@ -92,7 +92,7 @@ function Navbar() {
             <>
               <li className={styles.navOption}>
                 <NavLink
-                  to="/buybusy/myorders"
+                  to="/myorders"
                   className={styles.navLink}
                   style={({ isActive }) => {
                     return {
@@ -106,7 +106,7 @@ function Navbar() {
               </li>
               <li className={styles.navOption}>
                 <NavLink
-                  to="/buybusy/cart"
+                  to="/cart"
                   className={styles.navLink}
                   style={({ isActive }) => {
                     return {
@@ -129,7 +129,7 @@ function Navbar() {
             <li className={styles.navOption}>
               <NavLink
                 end
-                to="/buybusy/signin"
+                to="/signin"
                 className={styles.navLink}
                 style={({ isActive }) => {
                   return {
@@ -176,7 +176,7 @@ function Navbar() {
               <NavLink
                 onClick={handleMenuClose}
                 end
-                to="/buybusy"
+                to="/"
                 className={styles.navLink}
                 style={({ isActive }) => {
                   return {
@@ -194,7 +194,7 @@ function Navbar() {
                   <NavLink
                     end
                     onClick={handleMenuClose}
-                    to="/buybusy/myorders"
+                    to="/myorders"
                     className={styles.navLink}
                     style={({ isActive }) => {
                       return {
@@ -210,7 +210,7 @@ function Navbar() {
                   <NavLink
                     end
                     onClick={handleMenuClose}
-                    to="/buybusy/cart"
+                    to="/cart"
                     className={styles.navLink}
                     style={({ isActive }) => {
                       return {
@@ -238,7 +238,7 @@ function Navbar() {
                 <NavLink
                   onClick={handleMenuClose}
                   end
-                  to="/buybusy/signin"
+                  to="/signin"
                   className={styles.navLink}
                   style={({ isActive }) => {
                     return {

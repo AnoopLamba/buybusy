@@ -24,7 +24,7 @@ function ProductCard(props) {
 
     if (user === null) {
       toast.error("Login in to add item!");
-      navigate("/buybusy/signin");
+      navigate("/signin");
       setItemAdding(false);
       return;
     }

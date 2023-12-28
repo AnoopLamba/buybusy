@@ -27,7 +27,7 @@ function SignUp() {
 
   useEffect(() => {
     if (signUpSuccess) {
-      navigate("/buybusy");
+      navigate("/");
       dispatch(userActions.setSignUpSuccess(false));
     }
   }, [signUpSuccess, dispatch, navigate]);

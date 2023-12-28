@@ -6,7 +6,7 @@ function ErrorPage() {
     <div className={styles.container}>
       <div className={styles.form}>
         <h1>Page not found !</h1>
-        <Link to="/buybusy">
+        <Link to="/">
           <button className={styles.formBtn}>Home</button>
         </Link>
       </div>
