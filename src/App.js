@@ -55,25 +55,20 @@ function App() {
     }
   }, [user, dispatch]);
 
-  const router = createBrowserRouter(
-    [
-      {
-        path: "/buybusy",
-        element: <Navbar />,
-        errorElement: <ErrorPage />,
-        children: [
-          { path: "", element: <Home /> },
-          { path: "myorders", element: <Orders /> },
-          { path: "cart", element: <Cart /> },
-          { path: "signin", element: <SignIn /> },
-          { path: "signup", element: <SignUp /> },
-        ],
-      },
-    ],
+  const router = createBrowserRouter([
     {
-      basename: "/buybusy",
-    }
-  );
+      path: "/buybusy",
+      element: <Navbar />,
+      errorElement: <ErrorPage />,
+      children: [
+        { path: "", element: <Home /> },
+        { path: "myorders", element: <Orders /> },
+        { path: "cart", element: <Cart /> },
+        { path: "signin", element: <SignIn /> },
+        { path: "signup", element: <SignUp /> },
+      ],
+    },
+  ]);
 
   return (
     <div className="App">
